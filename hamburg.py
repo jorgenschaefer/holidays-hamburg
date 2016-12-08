@@ -5,14 +5,12 @@ import sys
 from datetime import date, timedelta
 
 FREE_DAYS = [#0,  # Monday
-             4,  # Friday
+             #4,  # Friday
              5,  # Saturday
              6,  # Sunday
              ]
 
-# 25 Urlaubstage, Anteilig je Teilzeit,
-# d.h. 4/5*25 = 20 Urlaubstage
-VACATION_DAYS = (25/5) * (7-len(FREE_DAYS))
+VACATION_DAYS = 27
 
 
 def main():
@@ -75,8 +73,8 @@ def holidays(year):
 
 
 def other_free(year):
-    return {date(year, 12, 24): "Heiligabend (Arbeitsanweisung)",
-            date(year, 12, 31): "Neujahr (Arbeitsanweisung)",
+    return {date(year, 12, 24): "Heiligabend (Halbtag)",
+            date(year, 12, 31): "Neujahr (Halbtag)",
             }
 
 # From Wikipedia
